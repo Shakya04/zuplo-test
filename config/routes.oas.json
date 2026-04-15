@@ -1,0 +1,35 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Zuplo API"
+  },
+  "paths": {
+    "/region4s": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "Get all region 4s ",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://www.winedecider.eu/api"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "monetization-inbound",
+              "rate-limit-inbound"
+            ]
+          }
+        },
+        "operationId": "new-route-d4f0a890"
+      }
+    }
+  }
+}
