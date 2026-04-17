@@ -11,13 +11,7 @@ const config: ZudokuConfig = {
     zuploMonetizationPlugin()
   ],
   site: {
-    title: "My Developer Portal",
-    logo: {
-      src: {
-        light: "https://cdn.zuplo.com/assets/my-dev-portal-light.svg",
-        dark: "https://cdn.zuplo.com/assets/my-dev-portal-dark.svg",
-      },
-    },
+    title: "Winedecider Pro",
   },
   metadata: {
     title: "Developer Portal",
