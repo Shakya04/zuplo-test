@@ -18,17 +18,37 @@
             "export": "urlForwardHandler",
             "module": "$import(@zuplo/runtime)",
             "options": {
-              "baseUrl": "https://www.winedecider.eu/api"
+              "baseUrl": " http://localhost:20580/api"
             }
           },
           "policies": {
-            "inbound": [
-              "monetization-inbound",
-              "rate-limit-inbound"
-            ]
+            "inbound": []
           }
         },
         "operationId": "new-route-d4f0a890"
+      }
+    },
+    "/search-by-producer/{producer}/{location}/{currency}": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "New Route",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "http://localhost:20580/api"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "new-route-1ef30a79"
       }
     }
   }
